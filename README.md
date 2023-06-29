@@ -1,11 +1,27 @@
 # Memory Game Instruction
 
-This proyect has a start page, click on start button to continue
-You have 30 seconds to finish the game
-You can start any times pressing the button Play Again
-You can mute or unmute the sound
+* This project has a start page, click on the start button to continue
+* You have 30 seconds to finish the game
+* You can start any time by pressing the button Play Again
+* You can mute or unmute the sound
 
 START THE GAME!!
+
+# Clone de Repository
+1.- Clone the repository by executing the following command:
+     `git clone https://github.com/nallelysid/memory-game.git`
+
+2.- Navigate to the project directory:
+     `cd memory-game`
+
+3.- Make sure you have Node.js and npm installed.
+
+4.-Install project dependencies:
+   `npm install`
+   
+5.- Run the project:
+    `npm start`
+
 
 # MemoryGame
 
