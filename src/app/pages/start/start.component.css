@@ -1,0 +1,66 @@
+img{
+  width: 100px;
+  height: 100px;
+}
+.start-screen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+    
+   
+  }
+  .btn {
+    margin-top: 20px;   
+    background-color: #63daf8;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn:hover {
+    background-color: #b1d3ee;
+    color: #FFF;
+  }
+
+
+  
+/* Styles for the StartScreenComponent */
+.slide-in {
+    animation: slideInAnimation 500ms ease-out;
+  }
+  
+  .slide-in-from-bottom {
+    animation: slideInFromBottomAnimation 500ms ease-out;
+  }
+  
+  @keyframes slideInAnimation {
+    0% {
+      transform: translateY(-300%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromBottomAnimation {
+     0% {
+       transform: translateY(300%);
+     }
+     100% {
+       transform: translateY(100);
+     }
+  }
+  

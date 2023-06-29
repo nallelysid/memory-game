@@ -1,0 +1,12 @@
+<div  class="start-screen-container"  >
+    <!-- Logo animation -->
+    <img src="./assets/images/logo.svg"  class="logo" [ngClass]="{ 'slide-in': isLoaded }">
+
+    <!-- Start button animation -->
+    <button  type="button" class="btn" (click)="startGame()"  [ngClass]="{ 'slide-in-from-bottom': isLoaded }">
+      Start
+    </button>
+    
+
+
+</div>

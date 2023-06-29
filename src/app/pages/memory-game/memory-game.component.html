@@ -1,0 +1,69 @@
+<audio #audioPlayer>
+    <source [src]="music" type="audio/mpeg">
+</audio>
+<audio #audioPlayerSuccess>
+  <source [src]="musicSuccess" type="audio/mpeg">
+</audio>
+<audio #audioPlayerError>
+  <source [src]="musicError" type="audio/mpeg">
+</audio>
+<audio #audioPlayerticking>
+  <source [src]="ticking" type="audio/mpeg">
+</audio>
+
+
+<div class="game-screen-container">
+  <div class="row">
+    <div class="col-1">
+      <a routerLink="/start" (click)="stopBackgroundSound()">Back</a>
+    </div>
+    <div class="col-1">
+      <div class="timer">{{ timeLeft }}s</div>
+    </div>
+    <div class="col-1">
+      <div class="mute-button" (click)="toggleSound()">
+          <img [src]="isMuted ? volumeOffIcon : volumeOnIcon" alt="Volume Icon">
+      </div>
+    </div>    
+  </div>
+    
+      
+    <div class="cards-container">
+      <div
+        class="card"
+        *ngFor="let card of cards"
+        [class.flipped]="card.flipped"
+        (click)="flipCard(card)"
+
+      >
+      <ng-container 
+        *ngTemplateOutlet="card.flipped ? cardBackTemplate : cardFrontTemplate; context: card ">
+      </ng-container>
+      
+   
+    </div>
+    <ng-template #cardFrontTemplate let-card>
+        <div class="card-front">
+            <span class="question-mark">?</span>
+          </div>
+    </ng-template>
+
+    <ng-template #cardBackTemplate let-card="symbol">
+        <div class="card-back">
+            <img [src]="card">
+          </div>
+    </ng-template>
+
+    
+   
+      
+    </div>
+    <div class="modal" *ngIf="showModal">
+      <div class="modal-message">{{ modalMessage }}</div>
+      <button class="modal-button" (click)="playAgain()">Play Again</button>
+    </div>
+  </div>
+  
+
+
+  
