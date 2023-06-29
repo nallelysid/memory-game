@@ -5,7 +5,9 @@
 * You can start any time by pressing the button Play Again
 * You can mute or unmute the sound
 
-START THE GAME!!
+  https://memory-game-nhl-5e730f272f1b.herokuapp.com/start
+
+     ### START THE GAME!!
 
 # Clone de Repository
 1.- Clone the repository by executing the following command:
@@ -20,7 +22,7 @@ START THE GAME!!
    `npm install`
    
 5.- Run the project:
-    `npm start`
+    `ng serve`
 
 
 # MemoryGame
